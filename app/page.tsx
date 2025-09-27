@@ -1,29 +1,55 @@
-import Header from "@/components/common/Header";
+"use client"
 import { Copyright } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <div className="text-black h-screen flex flex-col overflow-hidden">
-      <Header />
-      <main className="flex-1 border-l border-r border-gray-800 w-full max-w-[95%] mx-auto flex items-center p-2">
-        <div className="flex flex-col gap-2 ">
-          <h1 className="text-8xl font-bold text-center max-w-md">
+    <div className="relative h-screen w-screen overflow-hidden bg-[#f4f1e1] flex flex-col text-black">
+      <main className="flex flex-1 items-center justify-center px-4">
+        <div className="flex flex-col items-center text-center gap-8 animate-fade-in">
+          <h1
+            className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight 
+                       font-['Syne'] text-[#1a1a1a]
+                       drop-shadow-[3px_3px_0_#FA812F]
+                       animate-slide-down"
+          >
             Frontend Developer
           </h1>
-          <button className="border-2 border-gray-700 px-4 py-1.5 font-medium w-fit
-              shadow-[4px_4px_0_#FA812F]
-              active:shadow-[1.5px_1.5px_0_#FA812F]
-              active:translate-x-[2px] active:translate-y-[2px]
-              transition-all duration-150 cursor-pointer">
+
+          <p
+            className="max-w-md text-lg md:text-xl font-medium text-gray-800 
+                       leading-relaxed bg-gradient-to-r from-[#FA812F] via-[#ff9d5c] to-[#FA812F]
+                       bg-clip-text text-transparent"
+          >
+            Crafting pixel-perfect UIs with Next.js & Tailwind CSS
+          </p>
+
+          <button
+            onClick={() => router.push('/contact')}
+            className="block text-center px-6 py-3 text-lg font-semibold bg-[#1a1a1a] text-white
+                        border-3 border-[#FA812F] rounded-none
+                        shadow-[3px_3px_0_#FA812F]
+                        hover:shadow-[2px_2px_0_#FA812F] hover:translate-x-[2px] hover:translate-y-[2px]
+                        active:shadow-none active:translate-x-[4px] active:translate-y-[2px]
+                        transition-all duration-150 cursor-pointer"
+          >
             Let{"'"}s Connect
           </button>
         </div>
       </main>
 
-      <footer className="flex items-center justify-center gap-3 border-t border-gray-800 w-full max-w-[95%] border-r border-l mx-auto p-5">
-        <Copyright size={20}/>
-        <p>{new Date().getFullYear()} Muhammad.Uzair.Asif. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="flex items-center justify-center gap-2 py-4 font-mono text-sm text-gray-700">
+        <Copyright size={18} className="text-[#FA812F]" />
+        <span className="tracking-wide">
+          {new Date().getFullYear()} Muhammad Uzair Asif • All rights reserved
+        </span>
       </footer>
+
+      {/* Background Effects */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(250,129,47,0.12),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(250,129,47,0.08),transparent_70%)]" />
     </div>
   );
 }
