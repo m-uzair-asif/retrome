@@ -10,7 +10,7 @@ const Header = () => {
         <div className="fixed top-0 left-0 w-full z-50">
             <div className="w-full max-w-[95%] mx-auto flex justify-between items-center p-3 md:p-5">
                 <a href="/" className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight 
-                            text-black drop-shadow-[1px_1px_0_#FA812F] md:drop-shadow-[2px_2px_0_#FA812F] font-['Syne']">
+                            text-white font-['Syne']">
                     Muhammad<span className="text-orange-400">.</span>Uzair
                     <span className="text-orange-400">.</span>Asif
                 </a>
@@ -21,10 +21,10 @@ const Header = () => {
                             key={index}
                             href={item.link}
                             className={`
-                                relative px-4 lg:px-6 py-2 text-base lg:text-lg font-semibold bg-[#1a1a1a] text-white
-                                border-3 lg:border-4 border-[#FA812F] rounded-none
-                                shadow-[3px_3px_0_#FA812F] lg:shadow-[4px_4px_0_#FA812F]
-                                hover:shadow-[2px_2px_0_#FA812F] hover:translate-x-[2px] hover:translate-y-[2px]
+                                relative px-4 lg:px-6 py-2 text-base lg:text-lg font-semibold bg-[#000000] text-white
+                                border-3 lg:border-4 border-[#ffffff] rounded-none
+                                shadow-[3px_3px_0_#ffffff] lg:shadow-[4px_4px_0_#ffffff]
+                                hover:shadow-[2px_2px_0_#ffffff] hover:translate-x-[2px] hover:translate-y-[2px]
                                 active:shadow-none active:translate-x-[4px] active:translate-y-[2px]
                                 transition-all duration-150 cursor-pointer
                                 whitespace-nowrap
@@ -53,10 +53,10 @@ const Header = () => {
                             key={index}
                             href={item.link}
                             className={`
-                                block w-full text-center px-6 py-3 text-lg font-semibold bg-[#1a1a1a] text-white
-                                border-3 border-[#FA812F] rounded-none
-                                shadow-[3px_3px_0_#FA812F]
-                                hover:shadow-[2px_2px_0_#FA812F] hover:translate-x-[2px] hover:translate-y-[2px]
+                                block text-center px-6 py-3 text-lg font-semibold bg-[#000000] text-white
+                                border-3 border-[#ffffff] rounded-none
+                                shadow-[3px_3px_0_#ffffff]
+                                hover:shadow-[2px_2px_0_#ffffff] hover:translate-x-[2px] hover:translate-y-[2px]
                                 active:shadow-none active:translate-x-[4px] active:translate-y-[2px]
                                 transition-all duration-150 cursor-pointer
                             `}

@@ -35,7 +35,7 @@ export default function CommitChart() {
     if (loading) {
         return (
             <div className="flex items-center justify-center w-full h-[400px] rounded-xl">
-                <Loader className="animate-spin text-orange-400" size={48} />
+                <Loader className="animate-spin text-white" size={48} />
             </div>
         );
     }
@@ -53,8 +53,8 @@ export default function CommitChart() {
                     <LineChart data={data}>
                         <defs>
                             <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="95%" stopColor="#f97316" stopOpacity={0.8} />
-                                <stop offset="95%" stopColor="#f97316" stopOpacity={0.05} />
+                                <stop offset="95%" stopColor="#ffffff" stopOpacity={0.8} />
+                                <stop offset="95%" stopColor="#ffffff" stopOpacity={0.05} />
                             </linearGradient>
                         </defs>
 
